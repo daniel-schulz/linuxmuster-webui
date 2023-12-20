@@ -1,4 +1,5 @@
 on:
+  pull_request:
   push:
     # Sequence of patterns matched against refs/tags
     tags:
@@ -23,7 +24,7 @@ jobs:
         run: make deb
 
       - name: Copy artifacts
-        run: mkdir package && cp ../linuxmuster-webui7_* ./package
+        run: mkdir package && cp ../linuxmuster-webui8_* ./package
 
       - name: Upload artifact
         uses: actions/upload-artifact@v3
@@ -80,7 +81,7 @@ jobs:
   publish:
     needs: deb-package
     name: Push latest release to archive repo
-    if: github.event_name == 'push' && contains(github.ref, 'refs/tags/') && github.repository == 'linuxmuster/linuxmuster-webui7'
+    if: github.event_name == 'push' && contains(github.ref, 'refs/tags/') && github.repository == 'daniel-schulz/linuxmuster-webui8'
     runs-on: ubuntu-latest
     steps:
       - name: Setup SSH Key

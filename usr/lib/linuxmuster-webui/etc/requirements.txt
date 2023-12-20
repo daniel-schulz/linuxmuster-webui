@@ -1,12 +1,10 @@
-aj==2.2.7
-ajenti-panel==2.2.7
-ajenti.plugin.ace==0.32
-ajenti.plugin.core==0.107
-ajenti.plugin.dashboard==0.42
-ajenti.plugin.filesystem==0.50
-ajenti.plugin.plugins==0.51
-ajenti.plugin.settings==0.34
-ajenti.plugin.session-list==0.6
+aj-3==3.0.0
+ajenti-3-panel==3.0.4
+#ajenti-3.plugin.shell==0.1
+#ajenti-3.plugin.dashboard==0.1
+#ajenti-3.plugin.dashboard.traffic==0.1
+#ajenti-3.plugin.lmn_theme==0.1
+#ajenti-3.plugin.fstab==0.1
 configparser==3.5.0
 cryptography>=41.0.0
 dpath==2.0.6         # used for getSophomorixValue

@@ -1,3 +1,9 @@
+linuxmuster-webui8 (8.0.0-testing) lmn8; urgency=medium
+
+  * Upgrade to ajenti 3
+
+ -- Daniel Schulz <ds@schulz-informatik.com>  Wed, 20 Dec 2023 12:13:37 +0100
+
 linuxmuster-webui7 (7.2.29-testing) lmn72; urgency=medium
 
   * Update translations (thanks @cibomato)
