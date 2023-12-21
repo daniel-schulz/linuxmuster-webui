@@ -1,5 +1,4 @@
 on:
-  pull_request:
   push:
     # Sequence of patterns matched against refs/tags
     tags:
