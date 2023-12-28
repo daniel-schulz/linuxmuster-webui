@@ -1,5 +1,5 @@
 <h1 align="center">
-    Linuxmuster-webui7
+    linuxmuster-webui8
 </h1>
 
 <p align="center">
@@ -7,7 +7,7 @@
         <img src="https://img.shields.io/badge/Python-v3-green" alt="Badge License" />
     </a>
     <a href="https://raw.githubusercontent.com/ajenti/ajenti/master/LICENSE"> 
-        <img src="https://img.shields.io/github/license/linuxmuster/linuxmuster-webui7?label=License" alt="Badge License" />
+        <img src="https://img.shields.io/github/license/linuxmuster/linuxmuster-webui8?label=License" alt="Badge License" />
     </a>
     <a href="https://ask.linuxmuster.net">
         <img src="https://img.shields.io/discourse/users?logo=discourse&logoColor=white&server=https%3A%2F%2Fask.linuxmuster.net" alt="Community Forum"/>
@@ -44,8 +44,8 @@ Primary maintainer | arnaud@linuxmuster.net  / andreas.till@netzint.de
 <table align="center">
     <tr>
         <td align="center">
-            <a href="https://raw.githubusercontent.com/linuxmuster/linuxmuster-webui7/release/docs_src/_static/webui-login.png">
-                <img src="https://raw.githubusercontent.com/linuxmuster/linuxmuster-webui7/release/docs_src/_static/webui-login.png" alt="Screenshot Webui Login" width="500px" />
+            <a href="https://raw.githubusercontent.com/linuxmuster/linuxmuster-webui8/release/docs_src/_static/webui-login.png">
+                <img src="https://raw.githubusercontent.com/linuxmuster/linuxmuster-webui8/release/docs_src/_static/webui-login.png" alt="Screenshot Webui Login" width="500px" />
             </a>
         </td>
         <td align="center">
@@ -93,5 +93,5 @@ sudo sh -c 'echo "deb [arch=amd64 signed-by=/usr/share/keyrings/linuxmuster.net.
 ### 3. Apt update
 
 ```bash
-sudo apt update && sudo apt install linuxmuster-webui7
+sudo apt update && sudo apt install linuxmuster-webui8
 ```

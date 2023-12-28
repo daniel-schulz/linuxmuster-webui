@@ -30,21 +30,10 @@ case "$1" in
 Installing linuxmuster-webui
 ---------------------------------------------------------------"
 
-	          npm install -g angular-gettext-cli
-
-            rm -rf /var/lib/apt/lists/*
-            pip3 install --upgrade pip setuptools
-
-            cd /opt
-	          rm -rf ajenti3
-            git clone https://github.com/daniel-schulz/netzint-ajenti.git ajenti3
-            cd ajenti3
-            git checkout A3-80-update-the-ajenti-packaging
-
-            pip3 install -r ajenti-core/requirements.txt
-	          pip3 install coloredlogs
-
-            make all
+            # do first install
+            /usr/bin/python3 -m pip install -U pip wheel setuptools #distribute
+            hash -r
+            /usr/bin/python3 -m pip install -r $webuietc/requirements.txt
 
             msg "Copy default config files for webui"
             mkdir -p /etc/linuxmuster/webui/
@@ -54,6 +43,10 @@ Installing linuxmuster-webui
                 cp -a $ajcfg $ajcfg.bak
             fi
 
+            # Update 7.1.11, same scheme for all directories, prefer underscore to hyphen
+            if [ -d "/etc/linuxmuster/webui/email-templates" ] ; then
+                mv /etc/linuxmuster/webui/email-templates /etc/linuxmuster/webui/email_templates
+            fi
             # Email templates will always be overwritten
             cp -a $webuietc/email_templates /etc/linuxmuster/webui/
 
@@ -129,11 +122,11 @@ Updating linuxmuster-webui
 
             # Requirements must always be checked
             /usr/bin/python3 -m pip install -r $webuietc/requirements.txt
-
+            
             msg "Set default sophomorix webui rights"
             /usr/bin/python3 $update_scripts/merge-permissions.py
             /usr/sbin/sophomorix-ui
-
+            
             # Recreate upload folder using the right permissions
             msg "Verifying upload folder"
             bash $install_scripts/create_webuiUploadFolder.sh
@@ -160,7 +153,7 @@ Updating linuxmuster-webui ..done
     ;;
     upgrade|abort-upgrade)
     ;;
-
+    
     *)
         msg "postinst called with unknown argument \`$1'" >&2
         exit 0
